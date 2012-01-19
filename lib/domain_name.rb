@@ -86,7 +86,7 @@ class DomainName
     else
       @tld = @hostname
     end
-    etld_data = DomainName.etld_data
+    etld_data = {} #DomainName.etld_data
     if @canonical_tld_p = etld_data.key?(@tld)
       subdomain = domain = nil
       parent = @hostname
